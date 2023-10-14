@@ -1,0 +1,279 @@
+/*GENERAL*/
+
+*{
+    padding: 0em;
+    margin: 0em;
+     
+    
+}
+h1{
+    padding-bottom: 0.2em;
+    padding-left: 1em;
+    padding-top: 0.1em;
+    text-align: left;
+    font-family: "Autour One", sans-serif;
+}
+h2{
+    text-align: center;
+    padding: 2em;
+}
+
+h3{
+    text-align: center;
+    padding: 1em;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+@keyframes slideInLeft{
+    0%{
+        transform: translateX(-30em) ;
+    }
+    
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+body{
+    background-color: rgb(120, 192, 171);
+    font-family: "Oswald",sans-serif;  
+}
+
+
+
+/*HEADER-NAV*/
+
+.header-nav-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
+header { grid-area: 1 / 1 / 2 / 7; }
+nav { grid-area: 2 / 1 / 3 / 7; } 
+
+
+#header-nav-container{
+    position: sticky;
+    top: 0em;
+    z-index: 1;
+}
+
+/*HEADER*/
+header{
+    display: grid;
+    grid-area: 100%/100%;
+    height: 4em;
+    background-color: rgb(120, 192, 171);
+    align-items: center;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+#titulo { grid-area: 1 / 1 / 2 / 6; }
+#login{ grid-area: 1 / 6 / 2 / 7; }
+    
+
+
+#login{
+    
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10em;
+    border-style: inset;
+    background-color: rgb(32, 138, 106);
+    width: 5em;
+    height: 2em;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+}
+
+#login:hover{
+    background-color: rgb(72, 177, 142);
+    border-style:outset;
+}
+
+#titulo{
+    -ms-grid-row-span: 5fr;
+    animation: slideInLeft 1s ease-in-out 0.2s 1 normal both;
+}
+/*NAV*/
+
+nav{
+    display: grid;
+    grid-area: 100%/100%;
+    height: 4em;
+    background-color: rgb(32, 138, 106);
+    align-items: center;
+    font-family: "Mohave", sans-serif;
+   margin-bottom: 0;
+    
+    
+    
+}
+
+.navegacion{
+    display: grid;
+    grid-column: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "categorias inicio quienes contacto";
+    justify-content: space-around;
+
+}
+
+
+
+
+
+
+/*MAIN*/
+
+main{
+    margin-top: 0;
+    top: 0em;
+    position: relative;
+    min-height: 30em;
+    margin-top: 5em;
+    padding: 1em;
+}
+
+
+
+/*FOOTER*/ 
+
+footer{
+    grid-area: footer;
+    position:static;
+    bottom: 0em;
+    left: 0em;
+    height:5em;
+    background-color: rgb(32, 138, 106);
+    z-index: 0;
+    
+    text-align: center;
+    align-items: center;
+}
+
+#copyrightReclamos{
+    text-align: center;
+    margin-top: 2em;
+    padding-top: 2em;
+}
+
+
+    
+
+/*INDEX*/
+
+.seccionContacto{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: center;
+    justify-content: space-between;
+    }
+    
+    
+#datosContacto {
+    height: 50%;
+    grid-area: 1 / 1 / 2 / 2;  
+    align-content: center;
+    
+    
+}
+.redesSociales{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 0px;
+    justify-items: center;
+    }
+    
+    #facebook { grid-area: 1 / 3 / 2 / 4; }
+    #instagram { grid-area: 1 / 4 / 2 / 5; }
+    #youtube { grid-area: 1 / 5 / 2 / 6; }
+
+
+#mapa { 
+    
+    grid-area: 1 / 2 / 2 / 3;
+    height: 20em;
+    width: 20em;
+}
+
+#formularioContacto { 
+        grid-area: 1 / 3 / 2 / 4; 
+    }
+       
+    
+
+#seccionQuienesSomos{
+    margin-top: 0;
+    padding-top: 0;
+    scroll-margin-top: 6em;
+    
+}
+
+#seccionContacto{
+    scroll-margin-top: 4em;
+}
+
+/*LOGIN*/
+
+
+.main-login{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0em;
+    grid-row-gap: 0px;
+    justify-items: center;
+    justify-content: space-between;
+    
+    }
+ 
+    
+#formularioLogin { grid-area: 1 / 2 / 2 / 3;  }
+#formularioRegistro { grid-area: 1 / 5 / 2 / 6; }
+    
+
+
+
+/*CATEGORIAS*/
+
+.contenedor-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .lista-categorias { 
+        grid-area: 1 / 2 / 2 / 3; 
+    }
+    
+    
