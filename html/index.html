@@ -9,11 +9,99 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Autour+One&family=Dancing+Script&family=Mohave&family=Oswald&display=swap" rel="stylesheet">
     <link rel="icon" href="/media/icon/icons8-book-48.ico">
+    <script src="/js/headerFooter.js"></script>
+   
 </head>
 <body>
     <div >
         <div class="header-nav-container" id="header-nav-container"></div>
         <main class="item main">
+            <div id="ingresos-container">
+                <div class="slideshow-container">
+                    <h2>Últimos ingresos</h2>
+                    <div class="mySlides">
+                        <div class="card">
+                            <img src="/media/image/el-problema-final.jpg" alt="El problema final" >
+                            <h4>El problema final</h4>
+                            <p class="price">$10699.00</p>
+                            <p>Crimen y misterio</p>
+                            <p><button>Agregar al carrito</button></p>
+                        </div>
+                        <div class="card">
+                            <img src="/media/image/holly-edicion-en-espanol.jpg" alt="Holly" >
+                            <h4>Holly</h4>
+                            <p class="price">$15999.00</p>
+                            <p>Terror</p>
+                            <p><button>Agregar al carrito</button></p>
+                        </div> 
+                        <div class="card">
+                            <img src="/media/image/horoscopo-chino-2024.jpg" alt="Horoscopo chino 2024" >
+                            <h4>Horóscopo chino 2024</h4>
+                            <p class="price">$7999.00</p>
+                            <p>Religión y espiritualidad</p>
+                            <p><button>Agregar al carrito</button></p>
+                        </div> 
+                    </div>
+                    <div class="mySlides">
+                        <div class="card">
+                            <img src="/media/image/un-mundo-de-ensueno.jpg" alt="Un mundo de ensueño" >
+                            <h4>El problema final</h4>
+                            <p class="price">$10999.00</p>
+                            <p>Romance</p>
+                            <p><button>Agregar al carrito</button></p>
+                        </div> 
+                        <div class="card">
+                            <img src="/media/image/roger-waters.jpg" alt="Roger Waters" >
+                            <h4>Roger Waters</h4>
+                            <p class="price">$9999.00</p>
+                            <p>Música</p>
+                            <p><button>Agregar al carrito</button></p>
+                        </div>
+                        <div class="card">
+                            <img src="/media/image/la-armadura-de-la-luz-saga-los-pilares-de-la-tierra-4.jpg" alt="La armadura de la luz saga los pilares de la tierra" >
+                            <h4>La armadura de la luz</h4>
+                            <p class="price">$12699.00</p>
+                            <p>Fantasía</p>
+                            <p><button>Agregar al carrito</button></p>
+                        </div>  
+                    </div>
+                    <div class="mySlides">
+                        <div class="card">
+                            <img src="/media/image/oxido.jpg" alt="Oxido" >
+                            <h4>Óxido</h4>
+                            <p class="price">$12999.00</p>
+                            <p>Política</p>
+                            <p><button>Agregar al carrito</button></p>
+                        </div> 
+                        <div class="card">
+                            <img src="/media/image/artificial.jpg" alt="Artificial" >
+                            <h4>Artificial</h4>
+                            <p class="price">$7999.00</p>
+                            <p>Ciencia y tecnología</p>
+                            <p><button>Agregar al carrito</button></p>
+                        </div>
+                        <div class="card">
+                            <img src="/media/image/73-margaritas.jpg" alt="73 margaritas" >
+                            <h4>73 margaritas</h4>
+                            <p class="price">$6999.00</p>
+                            <p>Romance</p>
+                            <p><button>Agregar al carrito</button></p>
+                        </div>  
+                        
+                        
+                    </div>
+                
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                
+                  <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
+                
+            </div>
             <h2 id="seccionQuienesSomos">Quiénes somos</h2>
             <div class="seccionQuienesSomos" >
                 
@@ -22,6 +110,7 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur aliquid earum officia eaque et ullam temporibus omnis repellat ipsum laboriosam, sed labore non illo ab velit nihil ducimus magnam perferendis?</p>
             </div>
             <h2 id="seccionContacto">Contacto</h2>
+            
             <div class="seccionContacto" >
                     <div id="datosContacto">
                         <ul>
@@ -45,9 +134,9 @@
                     <form action="" method="post" >
                         <fieldset>
                             <legend><h4>Dejanos tu consulta!</h4></legend>
-                            <label for="nombreApellido">Nombre y apellido:</label><br>
+                            <label  for="nombreApellido">Nombre y apellido:</label><br>
                             <input type="text" id="nombreApellido" name="nombreApellido" size="35" maxlength="50" required><br>
-                            <label for="email">Email:</label><br>
+                            <label  for="email">Email:</label><br>
                             <input type="email" id="email" name="email" size="35" maxlength="50" required><br><br>
                             <textarea name="consulta" id="consulta" cols="40" rows="10" required>Escriba aquí su consulta...</textarea >
                         </fieldset>
@@ -58,8 +147,7 @@
             </div>
         </main>
         <footer class="item footer" id="footer-container"></footer>
-        <script src="/js/headerFooter.js"></script>
-        
     </div>
+    <script src="/js/sliderIngresosRecomendados.js"></script>
 </body>
 </html>

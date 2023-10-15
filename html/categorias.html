@@ -9,28 +9,65 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Autour+One&family=Dancing+Script&family=Mohave&family=Oswald&display=swap" rel="stylesheet">
     <link rel="icon" href="/media/icon/icons8-book-48.ico">
+    <script src="/js/headerFooter.js"></script>
 </head>
 <body>
     <header class="item header" id="header-nav-container"></header>
     <main class="item main">
         <div class="contenedor-categorias">
-
-            <ul class="lista-categorias">
-                <li class="item-categoria"><a href="">Arte</a></li>
-                <li class="item-categoria"><a href="">Ciencia</a></li>
-                <li class="item-categoria"><a href="">Ciencia Ficción</a></li>
-                <li class="item-categoria"><a href="">Derecho</a></li>
-                <li class="item-categoria"><a href="">Fantasía</a></li>
-                <li class="item-categoria"><a href="">Periodismo</a></li>
-                <li class="item-categoria"><a href="">Poesía</a></li>
-                <li class="item-categoria"><a href="">Religión</a></li>
-                <li class="item-categoria"><a href="">Terror</a></li>
-            </ul>
+            
+            <ul class="lista-categorias"><h3>
+                <li><h2 id="titulo-categorias">Categorías</h2></li>
+                <li> <button type="button" class="collapsible">Arte</button>
+                    <div class="content"><h5>
+                      <a href="">Arquitectura</a>
+                      <a href="">Diseño</a>
+                      <a href="">Fotografía</a>
+                      <a href="">Música</a>
+                    </h5></div> </li>
+                <li><button type="button" class="collapsible">Ciencia</button><div class="content"><h5>
+                    <a href="">Astronomía</a>
+                    <a href="">Biología y microbiología</a>
+                    <a href="">Ciencia y tecnología</a>
+                    <a href="">Física, química y matemáticas</a>
+                    <a href="">Geografía</a>
+                  </h5></div></li>
+                <li><button type="button" class="collapsible">Computación y ciencias de la información</button><div class="content"><h5>
+                    <a href="">Bases de datos</a>
+                    <a href="">Desarrollo de software</a>
+                    <a href="">Hardware</a>
+                    <a href="">Redes y teleinformática</a>
+                    <a href="">Seguridad informática</a>
+                  </h5></div></li>
+                <li><button type="button" class="collapsible">Economía y finanzas</button><div class="content"><h5>
+                    <a href="">Economía</a>
+                    <a href="">Finanzas</a>
+                    <a href="">Gestión empresarial</a>
+                    <a href="">Negocios</a>
+                  </h5></div></li>
+                <li><button type="button" class="collapsible">Ficción</button><div class="content"><h5>
+                    <a href="">Ciencia ficción</a>
+                    <a href="">Crimen y misterio</a>
+                    <a href="">Fantasía</a>
+                    <a href="">Romance</a>
+                    <a href="">Terror</a>
+                  </h5></div></li>
+                <li><button type="button" class="collapsible">Filosofía y religión</button><div class="content"><h5>
+                    <a href="">Filosofía</a>
+                    <a href="">Religión y espiritualidad</a>
+                  </h5></div></li>
+                <li><button type="button" class="collapsible">Sociedad y ciencias sociales</button><div class="content"><h5>
+                    <a href="">Educación</a>
+                    <a href="">Política</a>
+                    <a href="">Psicología</a>
+                    <a href="">Sociología y antropología</a>
+                  </h5></div></li>
+            </h3></ul>
 
         </div>
         
     </main>
     <footer id="footer-container"></footer>
-    <script src="/js/headerFooter.js"></script>
+    <script src="/js/colapsable.js"></script>
 </body>
 </html>
