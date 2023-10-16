@@ -251,6 +251,14 @@ footer{
     padding-top: 0;
     scroll-margin-top: 6em;
     
+    
+}
+
+.seccionQuienesSomos{
+    background-color: #ddd;
+    box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    padding: 1em;
 }
 
 #seccionContacto{
@@ -281,12 +289,14 @@ footer{
     border-radius: 1em;
     display: grid;
     justify-items:  center;
-    padding: 1em;
+    padding: 0.8em;
+    box-shadow: 0 0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
    
 }
 
 #formularioLogin{
     width: 20em;
+    
 }
 .formularioRegistro-container { 
     grid-area: 1 / 5 / 2 / 6;
@@ -295,7 +305,8 @@ footer{
     border-radius: 1em;
     display: grid;
     justify-items:center;
-    padding: 1em;
+    padding: 0.8em;
+    box-shadow: 0 0.2em 0.3em 0 rgba(0, 0, 0, 0.2);
 }
 
 #formularioRegistro{
@@ -323,6 +334,7 @@ footer{
     margin-left: 28em;
     border-radius: 1em;
     border: solid 0.2em cadetblue;
+    box-shadow: 0 0.4em 0.6em 0 rgba(0, 0, 0, 0.2);
 }
     
 .lista-categorias { 
@@ -342,7 +354,7 @@ footer{
     cursor: pointer;
     padding: 0.5em;
     width: 100%;
-    border: none;
+    border:none;
     width: 15em;
     text-align: center;
     outline: none;
@@ -364,6 +376,7 @@ footer{
     width: 10em;
     margin-left: 2.5em;
     border-radius: 1em;
+   
   }
 
   .content a{
@@ -413,7 +426,7 @@ footer{
     max-height: 20em;
   }
 
-  /*INGRESOS Y RECOMENDACIONES*/
+  /*SLIDER*/
 
    
 .slideshow-container {
@@ -444,12 +457,11 @@ footer{
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -30px;
-    padding: 16px;
+    padding: 1em;
     color: #888;
     font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
+    font-size: 1em;
+    border-radius: 0 0.1em 0.1em 0;
     user-select: none;
   }
   
@@ -469,16 +481,16 @@ footer{
 
   .dot-container {
     text-align: center;
-    padding: 20px;
+    padding: 1em;
     background: #ddd;
   }
   
  
   .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
+    height: 1em;
+    width: 1em;
+    margin: 0;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
