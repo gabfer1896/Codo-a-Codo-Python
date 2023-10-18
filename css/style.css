@@ -41,6 +41,7 @@ fieldset{
     border: solid 0.2em cadetblue;
     padding: 0.5em;
     padding-left: 1em;
+    
 }
 
 
@@ -101,7 +102,7 @@ nav { grid-area: 2 / 1 / 3 / 7; }
 header{
     display: grid;
     grid-area: 100%/100%;
-    height: 4em;
+    height: fit-content;
     background-color: rgb(228, 231, 224);
     align-items: center;
 }
@@ -153,7 +154,7 @@ header{
 nav{
     display: grid;
     grid-area: 100%/100%;
-    height: 4em;
+    height: fit-content;
     background-color: rgb(32, 138, 106);
     align-items: center;
     font-family: "Mohave", sans-serif;
@@ -345,9 +346,9 @@ footer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
+    grid-column-gap: 1em;
     grid-row-gap: 0px;
-    margin-top: 6em;
+    margin-top: 2em;
     justify-items: center;
     
     }
@@ -356,7 +357,7 @@ footer{
 .formularioLogin-container { 
     grid-area: 1 / 1 / 2 / 2; 
     background-color: #ddd;
-    width: 90%;
+    width: fit-content;
     height: 15em;
     border-radius: 1em;
     display: grid;
@@ -370,11 +371,14 @@ footer{
     width: 30em;
     background-color: #ddd;
     
+    width: fit-content;
+    
+    
 }
 .formularioRegistro-container { 
     grid-area: 1 / 2 / 2 / 3;
     background-color: #ddd;
-    width: 90%;
+    width: fit-content;
     border-radius: 1em;
     display: grid;
     justify-items:center;
@@ -385,6 +389,7 @@ footer{
 #formularioRegistro {
     width: 30em;
     background-color: #ddd;
+    width: fit-content;
 }
 
 
@@ -447,6 +452,17 @@ footer{
     padding: 0.2em;
   }
 
+
+  .main-categorias{
+    top: 2em;
+  }
+
+  #contenido-categoria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); 
+    grid-gap: 1em; 
+    justify-content: center; 
+  }
 
   /*LIBROS*/
 

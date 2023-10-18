@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Autour+One&family=Dancing+Script&family=Mohave&family=Oswald&display=swap" rel="stylesheet">
     <link rel="icon" href="/media/icon/icons8-book-48.ico">
     <script src="/js/headerFooter.js"></script>
-   
+    <script src="/js/validarFormContacto.js"></script>
 </head>
 <body>
     <div >
@@ -23,22 +23,22 @@
                         <div class="card">
                             <img src="/media/image/el-problema-final.jpg" alt="El problema final" >
                             <h4>El problema final</h4>
-                            <p class="price">$10699.00</p>
-                            <p>Crimen y misterio</p>
+                            <p class="price">$10699</p>
+                            <p class="genero">Crimen y misterio</p>
                             <p><button>Agregar al carrito</button></p>
                         </div>
                         <div class="card">
                             <img src="/media/image/holly-edicion-en-espanol.jpg" alt="Holly" >
                             <h4>Holly</h4>
-                            <p class="price">$15999.00</p>
-                            <p>Terror</p>
+                            <p class="price">$15999</p>
+                            <p class="genero">Terror</p>
                             <p><button>Agregar al carrito</button></p>
                         </div> 
                         <div class="card">
                             <img src="/media/image/horoscopo-chino-2024.jpg" alt="Horoscopo chino 2024" >
                             <h4>Horóscopo chino 2024</h4>
-                            <p class="price">$7999.00</p>
-                            <p>Religión y espiritualidad</p>
+                            <p class="price">$7999</p>
+                            <p class="genero">Religión, espíritu y creencias</p>
                             <p><button>Agregar al carrito</button></p>
                         </div> 
                     </div>
@@ -46,45 +46,45 @@
                         <div class="card">
                             <img src="/media/image/un-mundo-de-ensueno.jpg" alt="Un mundo de ensueño" >
                             <h4>Un mundo de ensueño</h4>
-                            <p class="price">$10999.00</p>
-                            <p>Romance</p>
+                            <p class="price">$10999</p>
+                            <p class="genero">Romance</p>
                             <p><button>Agregar al carrito</button></p>
                         </div> 
                         <div class="card">
                             <img src="/media/image/roger-waters.jpg" alt="Roger Waters" >
                             <h4>Roger Waters</h4>
-                            <p class="price">$9999.00</p>
-                            <p>Música</p>
+                            <p class="price">$9999</p>
+                            <p class="genero">Música</p>
                             <p><button>Agregar al carrito</button></p>
                         </div>
                         <div class="card">
                             <img src="/media/image/la-armadura-de-la-luz-saga-los-pilares-de-la-tierra-4.jpg" alt="La armadura de la luz saga los pilares de la tierra" >
                             <h4>La armadura de la luz</h4>
-                            <p class="price">$12699.00</p>
+                            <p class="price">$12699</p>
                             <p>Fantasía</p>
                             <p><button>Agregar al carrito</button></p>
                         </div>  
                     </div>
                     <div class="mySlides">
                         <div class="card">
-                            <img src="/media/image/oxido.jpg" alt="Oxido" >
-                            <h4>Óxido</h4>
-                            <p class="price">$12999.00</p>
-                            <p>Política</p>
+                            <img src="/media/image/el-hombre-en-busca-de-sentido.jpg" alt="El hombre en busca de sentido" >
+                            <h4>El hombre en busca de sentido</h4>
+                            <p class="price">$6890</p>
+                            <p class="genero">Psicología</p>
                             <p><button>Agregar al carrito</button></p>
                         </div> 
                         <div class="card">
                             <img src="/media/image/artificial.jpg" alt="Artificial" >
                             <h4>Artificial</h4>
-                            <p class="price">$7999.00</p>
-                            <p>Ciencia y tecnología</p>
+                            <p class="price">$7999</p>
+                            <p class="genero">Divulgación científica</p>
                             <p><button>Agregar al carrito</button></p>
                         </div>
                         <div class="card">
                             <img src="/media/image/73-margaritas.jpg" alt="73 margaritas" >
                             <h4>73 margaritas</h4>
-                            <p class="price">$6999.00</p>
-                            <p>Romance</p>
+                            <p class="price">$6999</p>
+                            <p class="genero">Romance</p>
                             <p><button>Agregar al carrito</button></p>
                         </div>  
                         
@@ -131,14 +131,14 @@
                     </div>
                 
                 <div id="formularioContacto">
-                    <form action="mailto:codoacodo@gmail.com?subject=Consulta" method="post" enctype="text/plain">
+                    <form action="mailto:codoacodo@gmail.com?subject=Consulta" method="post" enctype="text/plain" onsubmit="return validarFormulario()">
                         <fieldset>
                             <legend><h4>Dejanos tu consulta!</h4></legend>
                             <label  for="nombreApellido">Nombre y apellido:</label><br>
-                            <input type="text" id="nombreApellido" name="nombreApellido" size="35" maxlength="50" required><br>
+                            <input type="text" id="nombreApellido" name="nombreApellido" size="35" maxlength="50" ><br>
                             <label  for="email">Email:</label><br>
-                            <input type="email" id="email" name="email" size="35" maxlength="50" required><br><br>
-                            <textarea name="consulta" id="consulta" cols="40" rows="10" required>Escriba aquí su consulta...</textarea >
+                            <input type="email" id="email" name="email" size="35" maxlength="50" ><br><br>
+                            <textarea name="consulta" id="consulta" cols="40" rows="10" >Escriba aquí su consulta...</textarea >
                         </fieldset>
                         <button class="btn-formulario" type="reset" >Borrar todo</button>
                         <button class="btn-formulario" type="submit" >Enviar</button>
@@ -150,5 +150,6 @@
     </div>
     <script src="/js/dropdown.js"></script>
     <script src="/js/sliderIngresosRecomendados.js"></script>
+    
 </body>
 </html>
