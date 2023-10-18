@@ -57,6 +57,7 @@ function mostrarCategoria(categoriaNombre) {
     
     var productos = productosPorCategoria[categoriaNombre];
 
+    productos.sort((a, b) => a.titulo.localeCompare(b.titulo));
     
     document.getElementById("titulo-categoria").textContent = categoriaNombre;
 

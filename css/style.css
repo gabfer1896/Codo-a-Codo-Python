@@ -268,7 +268,7 @@ footer{
 .seccionContacto{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     justify-items: center;
@@ -453,9 +453,7 @@ footer{
   }
 
 
-  .main-categorias{
-    top: 2em;
-  }
+  
 
   #contenido-categoria {
     display: grid;
