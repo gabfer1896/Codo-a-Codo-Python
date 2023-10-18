@@ -21,14 +21,15 @@ Para hacerlo más sencillo se separó el HEADER, NAV y FOOTER en archivos separa
 >"Contacto" --> Cuenta con un sector con los datos de contacto y los íconos/link de redes sociales (Facebook, Instagram y Youtube), pero estos no llevan a ningún lado. Cuenta con un Iframe de Google Maps y un formulario de contacto que actualmente no envía correo.
 
 >MAIN-login.html: actualmente cuenta con 2 formularios:
->"Login" --> formulario para ingresar usuario (type=text) y contraseña (type=password), ambos con la condición "required". Sin funcionalidad al no tener backend, pero podemos simular un login con JS, por ejemplo: si usuario es 1234 y contraseña es 1234 que muestre un alert confirmando o negando acceso.
+>"Login" --> formulario para ingresar usuario (type=text) y contraseña (type=password), ambos con la condición "required". Sin funcionalidad al no tener backend, pero con el archivo validarUsuario.js se hace una petición a la API JSON Placeholder para simular un login con el nombre de usuario.
+
 >"Registro" --> formulario para registrase que solicita: nombre (type=text), apellido (type=text), número de documento (type=number), email (type=email), fecha de nacimiento (type=date), teléfono (type=tel), usuario (type=text), contraseña (type=password) y repetir contraseña (type=password). Todos los campos con la condición "required", excepto el teléfono. Por el momento cuenta con validación JS para corroborar que el contenido de los campos contraseña y repetir contraseña sea el mismo para poder enviar el formulario.
 
 >MAIN-carrito.html:
 >Actualmente no cuenta con funcionalidad real, pero toma datos de código tipo JSON insertado en el archivo JS "carrito.js" para simular un carro de compras con productos que pueder retirarse por completo o seleccionar con un checkbox para ver cuanto queda el precio total sin ellos sin necesidad de retirarlos del carrito. Se importa de la biblioteca de JQuery para poder darle funcionalidad a la página.
 
 >MAIN-categorias.html:
-> A desarrollar. Páginas para cada categoría donde se podrán ver las tarjetas de producto de los distintos libros. La idea es que se muestren en una grilla las tarjetas de los libros tal como se ve en el index.html, pero en mayor cantidad.
+>Visualización de las tarjetas de productos para los libros de las categorías seleccionadas alfabéticamente (por el momento sin posibilidad de alterar el orden). Para esto utiliza los archivos libros.js y categorias.js.
 
 
 #CSS
@@ -51,7 +52,7 @@ Para hacerlo más sencillo se separó el HEADER, NAV y FOOTER en archivos separa
 
 >LOGIN: diseño grid y características para los formularios de login y registro para dar sensación de profundidad.
 
->CATEGORIAS: diseño grid y características del desplegable.
+>CATEGORIAS: diseño grid y características del desplegable y de la página de categorías.
 
 >LIBROS: diseño de las tarjetas de productos (cards) para los libros a exponer.
 
@@ -71,3 +72,11 @@ Para hacerlo más sencillo se separó el HEADER, NAV y FOOTER en archivos separa
 >sliderIngresosRecomendados: usado en el "index.html" para la sección "Últimos ingresos" y posiblemente "Recomendados" o "Más vendidos" si se desarrollan. Establece el índice para las slides en 1, y el valor que va a adoptar n en función de qué botón (prev o next) se pulse con la función plusSlides(). Con la función currentSlide() se detecta en qué slide se está ubicado y con la función showSlides se va rotando entre las slides dependiendo el valor que adopte n respecto de i, si excede a 3 vuelve a 1 y si es menor a 1 vuelve a 3. Además de cambiar el slide se activa el dot correspondiente a la diapositiva.
 
 >dropdown.js: detecta el click sobre el botón "Categorías" de la barra de navegación y abre un menú en dropdown con enlaces a las categorías.
+
+>validarFormContacto.js: controla que los campos de "Nombre y Apellido" e "Email" no estén vacíos y que este último posean "@" y "." antes de enviar el formulario.
+
+>validarUsuario.js: recupera de la API Rest JSON Placeholder una lista de usuarios y controla que el input del usuario en el campo "Usuario" coincida con algún username presente en la API.
+
+>libros.js: crea arreglos de objetos con las categorías de libros, conteniendo por cada libro: título, precio y ruta de la imagen de portada.
+
+>categorias.js: recupera el valor del parámetro "categoria" de la URL y con un switch case determina el valor de la variable nombreCategoria. A partir de ahí recupera los objetos dentro de esa categoría del archivo "libros.js" para generar cards de estos y que se puedan visualizar en el html, ordenando estos alfabéticamente previo a insertar el html en "categorias.html". Además inserta el valor de esta variable en el título de la página. 
